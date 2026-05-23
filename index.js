@@ -8,7 +8,7 @@ function dice_Roll() {
     let numbers = [];
     let images = [];
     let rolls = (Number(diceInput.value));
-    if (rolls < 1 || isNaN(rolls)||!rolls.isInteger()) {
+    if (rolls < 1 || isNaN(rolls)||!Number.isInteger(rolls)) {
         diceOutput.textContent = "Please enter a valid number >= 1";
         diceImages.innerHTML = "";
     }
