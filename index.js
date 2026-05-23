@@ -7,14 +7,23 @@ const diceImages = document.getElementById("diceImages");
 function dice_Roll() {
     let numbers = [];
     let images = [];
-    let rolls = Number(diceInput.value);
-    for (let i = 1; i <= rolls; i++){
-        let x = Math.floor(Math.random() * 6) + 1;
-        numbers.push(x);
-        images.push(`<img src="diceImages/${x}.png" alt="Dice image of ${x}">`);
+    let rolls = Math.floor(Number(diceInput.value));
+    if (rolls < 1 || isNaN(rolls)) {
+        diceOutput.textContent = "Please enter a valid number >= 1";
+        diceImages.innerHTML = "";
     }
-    diceOutput.textContent = numbers.join(", ");
-    diceImages.innerHTML = images.join("<hr>");
+    else {
+        for (let i = 1; i <= rolls; i++) {
+          let x = Math.floor(Math.random() * 6) + 1;
+          numbers.push(x);
+          images.push(
+            `<img src="diceImages/${x}.png" alt="Dice image of ${x}">`,
+          );
+        }
+        diceOutput.textContent = numbers.join(", ");
+        diceImages.innerHTML = images.join("<hr>");
+    }
+    
 }
 
 diceRoll.onclick = dice_Roll;
