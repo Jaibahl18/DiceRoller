@@ -1,0 +1,46 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+
+.header{
+    background-color: #e9ecef ;
+    
+}
+
+label{
+    font-size: 1.2rem;
+}
+
+input[type="number"]{
+    text-align: center;
+    font-size: 1.2rem;
+    width: 50px;
+     height: 30px;
+    box-sizing: border-box;
+
+}
+
+button{
+    background-color: #4ea7ff;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 90px;
+}
+
+button:hover{
+        background-color: hsl(210, 100%, 75%);
+
+}
+
+button:active{
+        background-color: hsl(210, 100%, 85%);
+
+}
+
+
+
+
